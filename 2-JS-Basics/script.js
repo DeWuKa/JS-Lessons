@@ -3,7 +3,12 @@ var john = {
     lastName: "Smith",
     yearOfBirth: 1990,
     job: "teacher",
-    isMarried: false
+    isMarried: false,
+    family: ["Jane", "Mark", "Bob"],
+    calculateAge: function(){
+        this.age = 2016 - this.yearOfBirth;
+    }
 };
 
-console.log(john.job);
+john.calculateAge();
+console.log(john);
