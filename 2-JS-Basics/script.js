@@ -1,4 +1,9 @@
-var names = ["John", "Jane", "Mark"];
-var years = new Array(1990, 1969, 1948);
+var john = {
+    name: "John",
+    lastName: "Smith",
+    yearOfBirth: 1990,
+    job: "teacher",
+    isMarried: false
+};
 
-console.log(names[0]);
+console.log(john.job);
