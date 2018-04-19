@@ -1,26 +1,61 @@
+///////////////////////////////////////
+// Lecture: Hoisting
 
-var years = [1990, 1992, 1994, 1996, 1998];
-var years2 = [1990, 1993, 1999, 1980, 1995];
+///////////////////////////////////////
+// Lecture: Scoping
 
-var newYears = new Array();
 
-function printFullAge(years){
-    var ages = [];
+// First scoping example
 
-    for(var i = 0; i<years.length; i++){
-        newYears[i] = 2018-years[i];
+/*
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        console.log(a + b + c);
     }
-    
-    for(var i = 0; i<newYears.length; i++){
-        if (newYears[i] >= 25){
-            console.log("Person number " + i + " is adult");
-            ages.push(true);
-        } else {
-            console.log("person number " + i + " is young");
-            ages.push(false);
-        }
-    }
-    return ages;
 }
-var full_1 = printFullAge(years);
-var full_2 = printFullAge(years2);
+*/
+
+
+
+// Example to show the differece between execution stack and scope chain
+
+/*
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        var c = 'Hey!';
+        third()
+    }
+}
+
+function third() {
+    var d = 'John';
+    console.log(a + b + c + d);
+}
+*/
+
+
+
+///////////////////////////////////////
+// Lecture: The this keyword
+
+
+
+
+
+
+
+
+
