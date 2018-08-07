@@ -12,6 +12,8 @@ GAME RULES:
 var scores, roundScore, activePlayer, gamePlaying;
 init();
 
+var lastDice;
+
 document.querySelector(".btn-roll").addEventListener("click", function(){
 
     if(gamePlaying){
@@ -26,6 +28,7 @@ document.querySelector(".btn-roll").addEventListener("click", function(){
         } else {
             nextPlayer();
         }
+        lastDice = dice;
     }
 });
 

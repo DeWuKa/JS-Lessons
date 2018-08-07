@@ -120,6 +120,7 @@ button {
 }
 
 button:hover { font-weight: 600; }
+
 button:hover i { margin-right: 20px; }
 
 button:focus {
@@ -152,3 +153,9 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+.score {
+    text-align: center;
+
+}
