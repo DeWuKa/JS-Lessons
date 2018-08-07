@@ -21,8 +21,10 @@ document.querySelector(".btn-roll").addEventListener("click", function(){
         var diceDOM = document.querySelector(".dice");
         diceDOM.style.display = "block";
         diceDOM.src = "dice-" + dice + ".png";    
-    
-        if (dice != 1) {
+        
+        if (dice === 6  && lastDice === 6){
+
+        }else if (dice != 1) {
             roundScore += dice;
             document.querySelector("#current-" + activePlayer).textContent = roundScore;
         } else {
