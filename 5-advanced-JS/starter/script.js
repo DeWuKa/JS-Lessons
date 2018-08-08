@@ -169,7 +169,7 @@ function retirement(retirementAge) {
     }
 }
 
-var retirementUS = retirement(66);
+var retirementUS = retirement(66);;
 var retirementGermany = retirement(65);
 var retirementIceland = retirement(67);
 
@@ -178,7 +178,7 @@ retirementGermany(1990);
 retirementIceland(1990);
 */
 //retirement(66)(1990);
-
+/*
 function interviewQuestion(job){
     return function(name){
         if(job === "designer"){
@@ -191,9 +191,116 @@ function interviewQuestion(job){
     }
 }
 interviewQuestion("teacher")("John");
+*/
+/*
+var john = {
+    name: "John",
+    age: 26,
+    job: "teacher",
+    presentation: function(style, timeOfDay) {
+        if (style === "formal"){
+            console.log("Good " +timeOfDay + ", ladies and gentlemen! I\'m " + this.name + ", I\'m " + this.job + " and I\`m " + this.age + " years old."); 
+        } else if (style === "friendly"){
+            console.log("Hey! What\'s up? I\'m " + this.name + ", I\'m " + this.job + " and I\`m " + this.age + " years old. Have a nice " + timeOfDay + ".");
+        }
+    }
+}
+var emily = {
+    name: "Emily",
+    age: 35,
+    job: "designer"
+}
+
+john.presentation("formal", "morning");
+
+john.presentation.call(emily, "friendly", "afternoon");
+
+//john.presentation.apply(emily, ["friendly", "afternoon"])
+
+var johnFriendly = john.presentation.bind(john, "friendly");
+johnFriendly("morning");
+johnFriendly("night");
+
+var emilyFormal = john.presentation.bind(emily, "formal");
+emilyFormal("afternoon");
+*/
 
 
+//Function constructor
+/*
+var john = {
+    name: "John",
+    yearOfBirth: 1990,
+    job: "teacher"
+};
 
+var Person = function(name, yearOfBirth, job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
 
+Person.prototype.calculateAge  = function(){
+    console.log(2018 - this.yearOfBirth);
+}
 
+Person.prototype.lastName = "Smith";
 
+var john = new Person("John", 1990, "teacher");
+var jane = new Person("Jane", 1969, "designer");
+var mark = new Person("Mark", 1948, "retired");
+
+john.calculateAge();
+jane.calculateAge();
+mark.calculateAge();
+
+console.log(john.lastName);
+console.log(jane.lastName);
+console.log(mark.lastName);
+*/
+
+//coding challange
+/*
+(function(){
+    var score = 0;
+    var answers = [];
+    var Question = function(question, answers, correctAnswer){
+    this.question = question;
+    this.answers = answers;
+    this.correctAnswer = correctAnswer;
+    }
+
+    var firstQ = new Question("what does JS means?", ["0.JavaScript", "1.Nothing", "2.Java" ], 0);
+    var secondQ = new Question ("Who is the most beautiful woman in the world?", ["0.Helen of Troy", "1.Cleopatra", "2.Beata Damianowa"], 2);
+    var thirdQ = new Question ("Which coutry is the most beautiful in the World?", ["0.Norway", "1.Poland", "2.Germany"], 0)
+
+    var questions = [firstQ, secondQ, thirdQ];
+
+    var randQ = function(){
+        var rand = Math.floor(Math.random() * questions.length);
+        console.log(questions[rand].question);
+        console.log(questions[rand].answers[0]);
+        console.log(questions[rand].answers[1]);
+        console.log(questions[rand].answers[2]);
+        var answer = prompt("Please enter your answer, choose 0, 1 or 2");
+        if (answer == questions[rand].correctAnswer){
+            console.log("Correct!");  
+            score++;
+            console.log("Your score " + score);
+            console.log("----------------------");
+            randQ();         
+        }
+        else if(answer == "exit"){
+            console.log("Thank you for your time");
+        }
+        else {
+            score = 0;
+            console.log("Wrong answer! GAME OVER");
+            console.log("Your score " + score);
+            console.log("----------------------");
+            randQ();
+        }
+    };
+    randQ();
+})();
+*/
