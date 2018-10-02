@@ -1,4 +1,3 @@
-
 // BUDGET CONTROLLER
 var budgetController = (function(){
 
@@ -198,7 +197,7 @@ var UIController = (function(){
             }
 
             // replace placeholder text with data
-            newHtml = html.replace("%id%", obj.id);
+            newHtml = html.replace("%id%", obj.ID);
             newHtml = newHtml.replace("%description%", obj.description);
             newHtml = newHtml.replace("%value%", formatNumber(obj.value, type));
 
